@@ -21,7 +21,7 @@ const authOptions = {
                 const userExists = await User.findOne({email});
                 if(!userExists){
                   console.log("User does not exist in db")
-                    let res = await fetch(process.env.NEXTAUTH_URL+"/api/user",{
+                    let res = await fetch(process.env.NEXTAUTH_URL+"api/user",{
                         method:"POST",
                         headers:{
                             "Content-Type":"application/json",
