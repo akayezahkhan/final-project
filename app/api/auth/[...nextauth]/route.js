@@ -28,8 +28,8 @@ const authOptions = {
               },
               body: JSON.stringify({ name, email, notes:"my notes" }),
             });
-            console.log("adding User in db");
             if (res.ok) {
+              console.log("adding User in db");
               return user;
             }
           }
