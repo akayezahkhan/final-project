@@ -6,42 +6,41 @@ import GoogleProvider from "next-auth/providers/google";
 const authOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID ??"",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ??"",
+      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
     }),
   ],
-  callbacks:{
-    async signIn({user, account}){
-      console.log("User"+ user)
-        let { name, email } = user;
-        if(account.provider == "google"){
-            try{
-                await connectMongoDB();
-                console.log("Mongo responded");
-                const userExists = await User.findOne({email});
-                if(!userExists){
-                  console.log("User does not exist in db")
-                    let res = await fetch(process.env.NEXTAUTH_URL+"api/user",{
-                        method:"POST",
-                        headers:{
-                            "Content-Type":"application/json",
-                        },
-                        body:JSON.stringify({name, email})
-                      })
-                      console.log("adding User in db")
-                    if(res.ok){
-                      
-                        return user;
-                    }
-                }
-                console.log("User already exists in db")
-            }catch(error){
-                console.log("ERROR SAVING DATA TO MONGO", error)
+  callbacks: {
+    async signIn({ user, account }) {
+      console.log("User" + user);
+      let { name, email, task } = user;
+      if (account.provider == "google") {
+        try {
+          await connectMongoDB();
+          console.log("Mongo responded");
+          const userExists = await User.findOne({ email });
+          if (!userExists) {
+            console.log("User does not exist in db");
+            let res = await fetch(process.env.NEXTAUTH_URL + "api/user", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, email, task }),
+            });
+            console.log("adding User in db");
+            if (res.ok) {
+              return user;
             }
+          }
+          console.log("User already exists in db");
+        } catch (error) {
+          console.log("ERROR SAVING DATA TO MONGO", error);
         }
-        return user;
-    }
-  }
+      }
+      return user;
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);
