@@ -1,6 +1,6 @@
 function Bodypart(props) {
   return <div className="border-black">
-  {props.session.user.image}
+  {props.session.user}
   Ayezah</div>;
 }
 
