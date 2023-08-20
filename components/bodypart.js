@@ -18,8 +18,29 @@ function Bodypart() {
     setTodo(newTodo);
   };
 
+
+
+
+
+  const [notes, setnotes] = useState([]);
+  const [inputnotesValue, setInputnotesValue] = useState("");
+
+  const handleInputnotesValue = (e) => {
+    setInputnotesValue(e.target.value);
+  };
+
+  const handleAddnotes = () => {
+    setTodo([...notes, inputnotesValue]);
+    setInputnotesValue("");
+  };
+
+  const handleDeletenotes = (index) => {
+    const newTodo = notes.filter((_, i) => i !== index);
+    setnotes(newTodo);
+  };
+
   return (
-    <div className="border-2 border-black">
+    <div className="flex border-2 border-black">
       <div className="m-2 border-2 border-orange-600">
         <h2 className=" text-lg">ToDo List</h2>
         <div className=" flex items-center space-x-2">
@@ -58,34 +79,34 @@ function Bodypart() {
         </ul>
       </div>
       <div className="m-2 border-2 border-orange-600">
-        <h2 className=" text-lg">ToDo List</h2>
+        <h2 className=" text-lg">Notes</h2>
         <div className=" flex items-center space-x-2">
           <input
             type="text"
-            placeholder="Enter Your Todo Task"
+            placeholder="Take note"
             className="input input-info "
-            value={inputValue}
-            onChange={handleInputValue}
+            value={inputnotesValue}
+            onChange={handleInputnotesValue}
           />
           <button
-            onClick={handleAddTodo}
+            onClick={handleAddnotes}
             className="p-2 text-white rounded-lg bg-green-600"
           >
             Add
           </button>
         </div>
         <ul className="my-4">
-          {todo.map((todoText, index) => (
+          {notes.map((note, index) => (
             <li
               key={index}
               className=" flex justify-between items-center my-1 "
             >
               <div className=" flex items-center space-x-2">
                 {" "}
-                <input type="checkbox" className="" /> <span>{todoText}</span>{" "}
+                <input type="checkbox" className="" /> <span>{note}</span>{" "}
               </div>
               <button
-                onClick={() => handleDeleteTodo(index)}
+                onClick={() => handleDeletenotes(index)}
                 className="p-2 text-white rounded-lg bg-red-600"
               >
                 Delete
