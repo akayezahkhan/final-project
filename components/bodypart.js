@@ -20,6 +20,7 @@ function Bodypart(props) {
 
   return (
     <div className="border-2 border-black">
+    <div className="m-2 border-2 border-orange-600">
       <h2 className=" text-lg">ToDo List</h2>
       <div className=" flex items-center space-x-2">
         <input
@@ -29,7 +30,7 @@ function Bodypart(props) {
           value={inputValue}
           onChange={handleInputValue}
         />
-        <button onClick={handleAddTodo} className=" btn btn-info">
+        <button onClick={handleAddTodo} className=" bg-green-600">
           Add
         </button>
       </div>
@@ -43,13 +44,15 @@ function Bodypart(props) {
             </div>
             <button
               onClick={() => handleDeleteTodo(index)}
-              className="btn btn-error "
+              className="bg-red-600"
             >
               Delete
             </button>
           </li>
         ))}
       </ul>
+
+    </div>
     </div>
   );
 }
