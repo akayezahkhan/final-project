@@ -1,5 +1,7 @@
 function Bodypart(props) {
-  return <div className="">{props.data.task}</div>;
+  return <div className="border-black">
+  {props.data.task}
+  Ayezah</div>;
 }
 
 export default Bodypart;
