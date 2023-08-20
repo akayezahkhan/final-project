@@ -2,15 +2,11 @@ import mongoose, { Schema, models } from "mongoose";
 
 const userSchema = new Schema(
   {
-    email: {
-      type: String,
-      require: true,
-    },
     name: {
       type: String,
       require: true,
     },
-    notes: {
+    email: {
       type: String,
       require: true,
     },
