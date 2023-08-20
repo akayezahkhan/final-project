@@ -19,9 +19,6 @@ function Bodypart() {
   };
 
 
-
-
-
   const [notes, setnotes] = useState([]);
   const [inputnotesValue, setInputnotesValue] = useState("");
 
@@ -30,7 +27,7 @@ function Bodypart() {
   };
 
   const handleAddnotes = () => {
-    setTodo([...notes, inputnotesValue]);
+    setnotes([...notes, inputnotesValue]);
     setInputnotesValue("");
   };
 
@@ -96,14 +93,14 @@ function Bodypart() {
           </button>
         </div>
         <ul className="my-4">
-          {notes.map((note, index) => (
+          {notes.map((notes, index) => (
             <li
               key={index}
               className=" flex justify-between items-center my-1 "
             >
               <div className=" flex items-center space-x-2">
                 {" "}
-                <input type="checkbox" className="" /> <span>{note}</span>{" "}
+                <input type="checkbox" className="" /> <span>{notes}</span>{" "}
               </div>
               <button
                 onClick={() => handleDeletenotes(index)}
