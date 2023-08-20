@@ -15,7 +15,22 @@ const userSchema = new Schema(
       require: true,
     },
   },
-  { timestamps: false }
+  { timestamps: true },
+  {
+    email: {
+      type: String,
+      require: true,
+    },
+    name: {
+      type: String,
+      require: true,
+    },
+    task: {
+      type: String,
+      require: true,
+    },
+
+  }
 
 );
 
