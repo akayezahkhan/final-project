@@ -80,7 +80,7 @@ export default function Dashboard() {
               <Header user={session?.user}></Header>
               <div className="h-fit">
                 {/* bodypart here */}
-                <Bodypart session={session}></Bodypart>
+                <Bodypart/>
               </div>
             </div>
           </div>
