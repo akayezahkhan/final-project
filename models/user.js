@@ -10,10 +10,6 @@ const userSchema = new Schema(
       type: String,
       require: true,
     },
-    notes: {
-      type: Boolean,
-      require: true,
-    },
   },
   { timestamps: true },
 
