@@ -5,6 +5,7 @@ import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Header from "@/components/header";
 import { useState } from "react";
+import Bodypart from "@/components/bodypart";
 
 export default function Dashboard() {
   const { status, data: session } = useSession();
@@ -78,14 +79,14 @@ export default function Dashboard() {
             <div className="w-full">
               <Header data={session?.user}></Header>
               <div className="h-fit">
-                Ayezah
                 {/* bodypart here */}
+                <Bodypart data={session?.user}></Bodypart>
               </div>
             </div>
           </div>
         </div>
       ) : (
-        router.push("../")
+        router.push("/")
       )}
     </div>
   );
