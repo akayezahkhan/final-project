@@ -26,7 +26,7 @@ const authOptions = {
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({ name, email, notes:"my notes" }),
+              body: JSON.stringify({ name, email, notes }),
             });
             if (res.ok) {
               console.log("adding User in db");
