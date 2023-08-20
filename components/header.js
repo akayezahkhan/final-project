@@ -7,14 +7,14 @@ function Header(props) {
       <div className="h-fit border-b-2  border-inherit w-full py-2 px-5 space-y-2">
         <div className="flex justify-between">
           <div className=" hidden space-x-2 text-2xl items-center md:flex text-gray-700 font-semibold">
-            Welcome {props.data.name} !
+            Welcome {props.user.name} !
           </div>
           <div className="flex items-center justify-end w-max">
             <Image
               height={50}
               width={50}
               className=" rounded-full"
-              src={props.data.image}
+              src={props.user.image}
               alt="grid icon"
             ></Image>
           </div>

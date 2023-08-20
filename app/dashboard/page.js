@@ -77,7 +77,7 @@ export default function Dashboard() {
               </button>
             </div>
             <div className="w-full">
-              <Header data={session?.user}></Header>
+              <Header user={session?.user}></Header>
               <div className="h-fit">
                 {/* bodypart here */}
                 <Bodypart session={session}></Bodypart>
