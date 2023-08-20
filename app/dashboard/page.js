@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Header from "@/components/header";
+import { useState } from "react";
 
 export default function Dashboard() {
   const { status, data: session } = useSession();
