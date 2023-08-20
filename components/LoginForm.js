@@ -61,7 +61,6 @@ const LoginForm = () => {
               </div>
               <button
                 className="bg-teal-200 my-3 w-full font-semibold h-12 border-2 active:scale-95 transition duration-200 drop-shadow-sm hover:scale-100 border-slate-300 rounded-xl bg-opacity-60 hover:bg-opacity-100"
-                onClick={handleOnClick}
               >
                 Log in
               </button>

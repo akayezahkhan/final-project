@@ -39,7 +39,7 @@ const SignUpForm = () => {
                 </div>
                 <button
                   className="bg-teal-200 my-3 w-full font-semibold h-12 border-2 active:scale-95 transition duration-200 drop-shadow-sm hover:scale-100 border-slate-300 rounded-xl bg-opacity-60 hover:bg-opacity-100"
-                  onClick={handleOnClick}
+                  
                 >
                   Sign up
                 </button>
@@ -68,7 +68,7 @@ const SignUpForm = () => {
                     <p className="text-gray-800">Already have an Account? </p>
                     <a
                       className="hover:cursor-pointer text-blue-600 hover:underline"
-                      href="../"
+                      href="/"
                     >
                       Sign in
                     </a>
