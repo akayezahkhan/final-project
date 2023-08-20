@@ -30,7 +30,7 @@ function Bodypart(props) {
           value={inputValue}
           onChange={handleInputValue}
         />
-        <button onClick={handleAddTodo} className=" bg-green-600">
+        <button onClick={handleAddTodo} className="p-2 text-white rounded-lg bg-green-600">
           Add
         </button>
       </div>
@@ -40,11 +40,11 @@ function Bodypart(props) {
             <div className=" flex items-center space-x-2">
               {" "}
               <input type="checkbox" className=" checkbox checkbox-info" />{" "}
-              <span className=" text-cyan-500">{todoText}</span>{" "}
+              <span>{todoText}</span>{" "}
             </div>
             <button
               onClick={() => handleDeleteTodo(index)}
-              className="bg-red-600"
+              className="p-2 text-white rounded-lg bg-red-600"
             >
               Delete
             </button>
