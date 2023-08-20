@@ -10,27 +10,12 @@ const userSchema = new Schema(
       type: String,
       require: true,
     },
-    task: {
+    notes: {
       type: String,
       require: true,
     },
   },
   { timestamps: true },
-  {
-    email: {
-      type: String,
-      require: true,
-    },
-    name: {
-      type: String,
-      require: true,
-    },
-    task: {
-      type: String,
-      require: true,
-    },
-
-  }
 
 );
 

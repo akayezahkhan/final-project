@@ -13,7 +13,7 @@ const authOptions = {
   callbacks: {
     async signIn({ user, account }) {
       console.log("User" + user);
-      let { name, email, task } = user;
+      let { name, email, notes } = user;
       if (account.provider == "google") {
         try {
           await connectMongoDB();
@@ -26,7 +26,7 @@ const authOptions = {
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({ name, email, task }),
+              body: JSON.stringify({ name, email, notes:"my notes" }),
             });
             console.log("adding User in db");
             if (res.ok) {
