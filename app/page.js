@@ -3,7 +3,7 @@ import LoginForm from "../components/LoginForm";
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen overflow-x-hidden overflow-y-scroll">
+    <div className="h-screen w-screen overflow-scroll">
       <LoginForm />
     </div>
   );

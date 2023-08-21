@@ -15,7 +15,7 @@ const SignUpForm = () => {
       {status !== "authenticated" ? (
         <div className="min-h-screen max-h-screen">
           <Navbar />
-          <div className="absolute z-10 text-black font-medium flex justify-center items-center w-screen h-full">
+          <div className="absolute z-10 text-black font-medium flex justify-center items-center w-full h-full">
             <section className="flex flex-col h-max items-center bg-slate-50 bg-opacity-20 border-gray-200 border-2 border-dashed p-2.5 px-6">
               <p className="text-4xl my-5">Sign Up</p>
               <div className="flex flex-col space-y-4">
