@@ -16,7 +16,7 @@ const LoginForm = () => {
     router.push("/dashboard");
   }
   return (
-    <div className="min-h-screen max-h-screen">
+    <div>
       <Navbar />
       <div className="absolute z-10 text-black font-medium flex justify-center items-center w-screen h-full">
         <section className="flex flex-col h-max items-center bg-slate-50 bg-opacity-20 border-gray-200 border-2 border-dashed p-6">
