@@ -23,7 +23,7 @@ export default function Dashboard() {
     return <div></div> // Return null on the server-side to prevent rendering
   }
   return (
-    <div>
+    <div className="overflow-scroll">
       {status === "authenticated" ? (
         <div className="min-w-screen min-h-screen ">
           <Navbar />
