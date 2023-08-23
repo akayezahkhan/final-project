@@ -3,13 +3,11 @@ import Image from "next/image";
 
 function Header(props) {
   return (
-    <div>
-      <div className="h-fit border-b-2  border-inherit w-full py-2 px-5 space-y-2">
+      <div className="border-b-2 border-purple-500 py-2 px-4 space-y-2 flex flex-col mb-2 mx-2">
         <div className="flex justify-between">
-          <div className=" hidden space-x-2 text-2xl items-center md:flex text-gray-700 font-semibold">
+          <div className="hidden space-x-2 text-2xl items-center md:flex text-gray-700 font-semibold">
             Welcome {props.user.name} !
           </div>
-          <div className="flex items-center justify-end w-max">
             <Image
               height={50}
               width={50}
@@ -17,7 +15,6 @@ function Header(props) {
               src={props.user.image}
               alt="grid icon"
             ></Image>
-          </div>
         </div>
         <div className="flex justify-between items-baseline">
           <div className="h-full px-2 items-center mr-20">
@@ -31,7 +28,6 @@ function Header(props) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
