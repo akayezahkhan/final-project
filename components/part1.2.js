@@ -1,17 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocation,
-  faToggleOn,
-  faToggleOff,
-} from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+
 
 export default function Part1_2() {
-  const [menuIcon, setMenuIcon] = useState(faToggleOff);
-  const toggle = () => {
-    setMenuIcon(menuIcon == faToggleOff ? faToggleOn : faToggleOff);
-  };
+
   return (
     <div className=" mx-3 my-3 h-[64rem]">
       <textarea
