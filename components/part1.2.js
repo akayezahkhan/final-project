@@ -42,10 +42,7 @@ export default function Part1_2() {
 
       <div className=" flex items-center space-x-3 my-3">
         <h1 className=" text-cyan-400">Add Location</h1>
-        <FontAwesomeIcon
-          icon={faLocation}
-          className=" hover:scale-105 transition duration-150 cursor-pointer h-5 w-5"
-        />
+
       </div>
 
       <div className=" flex items-center space-x-3 my-3">
