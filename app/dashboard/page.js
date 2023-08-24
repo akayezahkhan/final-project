@@ -37,7 +37,7 @@ export default function Dashboard() {
               </button>
               {/* SIDEBAR */}
               {showSidebar && (
-                <div className="hidden h-screen lg:grid lg:grid-col-1 shadow-black bg-slate-100 bg-opacity-40 ">
+                <div className="hidden h-screen md:grid md:grid-col-1 shadow-black bg-slate-100 bg-opacity-40 ">
                   <div className="flex flex-col justify-center">
                     <div className="h-12 my-2 flex justify-center align-middle items-center text-2xl font-bold">
                       My Stack
