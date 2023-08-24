@@ -9,7 +9,7 @@ import Bodypart from "@/components/bodypart";
 
 export default function Dashboard() {
   const { status, data: session } = useSession();
-  const [showSidebar, setshowSidebar] = useState("");
+  const [showSidebar, setshowSidebar] = useState("show");
 
   const showOnClick = () => {
     setshowSidebar("show");
@@ -28,16 +28,16 @@ export default function Dashboard() {
         <div className="w-screen min-h-screen">
           <Navbar />
           <div className="flex justify-start">
-            <div className="flex flex-col w-1/4 lg:w-1/5">
+            <div className="flex flex-col w-1/4">
               <button
-                className="lg:hidden font-medium my-2 p-1 border justify-center rounded-lg hover:bg-red-600"
+                className=" font-medium my-2 p-1 border justify-center rounded-lg hover:bg-red-600"
                 onClick={hideOnClick}
               >
                 hide sidebar
               </button>
               {/* SIDEBAR */}
               {showSidebar && (
-                <div className="h-screen md:grid md:grid-col-1 shadow-black bg-slate-100 bg-opacity-40 ">
+                <div className="h-screen grid grid-col-1 shadow-black bg-slate-100 bg-opacity-40 ">
                   <div className="flex flex-col justify-center">
                     <div className="h-12 my-2 flex justify-center align-middle items-center text-2xl font-bold">
                       My Stack
@@ -70,7 +70,7 @@ export default function Dashboard() {
               {/* SIDEBAR END */}
 
               <button
-                className="lg:hidden font-medium my-2 p-1 border justify-center rounded-lg hover:bg-green-600"
+                className=" font-medium my-2 p-1 border justify-center rounded-lg hover:bg-green-600"
                 onClick={showOnClick}
               >
                 show sidebar
