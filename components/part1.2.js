@@ -56,7 +56,7 @@ export default function Part1_2() {
         className=" textarea-info"
       />
 
-      <button className=" hover:scale-105 transition duration-200 bg-black text-white rounded-xl px-2 py-1 float-right my-72">
+      <button className=" hover:scale-105 transition duration-200 bg-black text-white rounded-xl px-2 py-1 my-1">
         Save Task
       </button>
     </div>
