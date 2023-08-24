@@ -5,7 +5,7 @@ import React from "react";
 export default function Part1_2() {
 
   return (
-    <div className=" mx-3 my-3 h-[64rem]">
+    <div className="h-full flex flex-col rounded-lg p-1">
       <textarea
         placeholder="Add Description"
         className=" textarea textarea-info"

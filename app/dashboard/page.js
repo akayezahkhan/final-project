@@ -30,14 +30,14 @@ export default function Dashboard() {
           <div className="flex justify-start">
             <div className="flex flex-col w-1/4">
               <button
-                className=" font-medium my-2 p-1 border justify-center rounded-lg hover:bg-red-600"
+                className="lg:hidden font-medium my-2 p-1 border justify-center rounded-lg hover:bg-red-600"
                 onClick={hideOnClick}
               >
                 hide sidebar
               </button>
               {/* SIDEBAR */}
               {showSidebar && (
-                <div className="h-screen grid grid-col-1 shadow-black bg-slate-100 bg-opacity-40 ">
+                <div className="hidden h-screen lg:grid lg:grid-col-1 shadow-black bg-slate-100 bg-opacity-40 ">
                   <div className="flex flex-col justify-center">
                     <div className="h-12 my-2 flex justify-center align-middle items-center text-2xl font-bold">
                       My Stack
@@ -70,7 +70,7 @@ export default function Dashboard() {
               {/* SIDEBAR END */}
 
               <button
-                className=" font-medium my-2 p-1 border justify-center rounded-lg hover:bg-green-600"
+                className="lg:hidden font-medium my-2 p-1 border justify-center rounded-lg hover:bg-green-600"
                 onClick={showOnClick}
               >
                 show sidebar
